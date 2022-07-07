@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1 style="font-size: 16px; font-weight: bold; color: red;">In các số nguyên tố trong khoảng 2 số bất kỳ</h1>
+
+</head>
+<body>
+  <script>
+    let lowerNumber = parseInt(prompt('Enter first number: '));
+    let higherNumber = parseInt(prompt('Enter second number: '));
+
+    document.write("Các số nguyên tố từ số " + lowerNumber + " đến số " + higherNumber + " là : ");
+
+    for (let i = lowerNumber; i <= higherNumber; i++) 
+    {
+    let num_uocso = 0;
+
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+          num_uocso = 1;
+            break;
+        }
+    }
+
+    if (i > 1 && num_uocso == 0) 
+    {
+      document.write(i + ", ");
+    }
+    }
+  </script>
+
+</body>
+
+</html>
